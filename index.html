@@ -27,6 +27,27 @@
     @media(max-width:860px){.intro{grid-template-columns:1fr}.nature-mark{display:none}.workspace{grid-template-columns:1fr}.mobile-impact{display:block}.results{scroll-margin-top:14px}}
     @media(max-width:560px){.shell{width:min(100% - 22px,1180px)}.topbar{padding-top:10px}.top-title{font-size:16px}.brand-logo{width:82px;height:82px}.intro{padding-top:18px}.intro p{font-size:15px}.inputs{padding:18px}.result-header{padding:22px 20px}.result-grid{grid-template-columns:1fr;padding:14px}.impact{min-height:150px}.summary strong{font-size:21px}.summary div{padding:13px 14px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+    /* Novo layout compacto Blue ESG */
+    @media(min-width:861px){
+      body{min-height:100vh;background:radial-gradient(circle at 10% 0,rgba(78,177,223,.18),transparent 34%),linear-gradient(145deg,#f7fbfe 0,#edf6fb 100%)}
+      .shell{width:min(1440px,calc(100% - 52px))}
+      .topbar{height:76px;padding:8px 0;border-bottom:0}
+      .top-title{font-size:17px;letter-spacing:-.025em}.top-title::before{width:6px;height:30px}
+      .brand-logo{width:64px;height:64px;border-radius:18px;padding:4px;box-shadow:0 12px 28px rgba(8,79,145,.13);filter:none}
+      .intro{padding:6px 0 15px}.eyebrow{font-size:10px;letter-spacing:.14em}h1{font-size:31px;margin:4px 0 3px}.intro p{font-size:12px}
+      .workspace{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:16px;padding-bottom:10px}
+      .card{border-radius:22px;box-shadow:0 18px 48px rgba(22,65,91,.09);border-color:rgba(186,210,224,.72)}
+      .inputs{padding:18px}.section-head{align-items:center;margin-bottom:12px}.section-head h2{font-size:18px}.section-head p{font-size:11px}.reset{background:#edf5fa;border-radius:999px;padding:7px 12px;text-decoration:none!important}
+      .products{grid-template-columns:1fr 1fr;gap:10px}
+      .product{display:flex;flex-direction:column;align-items:stretch;gap:10px;min-height:128px;padding:14px;border-radius:17px;background:linear-gradient(145deg,#fff,#f8fbfd)}
+      .product-top{align-items:flex-start}.product-icon{width:40px;height:40px;border-radius:12px;background:linear-gradient(145deg,#e9f5fb,#e5f7ed);color:var(--blue)}.product-icon svg{width:21px;height:21px}
+      .product-name{font-size:13px}.product-meta{font-size:9px;line-height:1.45;margin-top:4px}
+      .stepper{grid-template-columns:40px 1fr 40px;margin-top:auto;border:0;border-radius:12px;background:#edf5fa}.stepper button{min-height:38px;font-size:19px;background:#0a5a9b}.stepper input{font-size:15px;background:#edf5fa}
+      .results{display:flex;flex-direction:column}.result-header{padding:18px 20px 16px;background:linear-gradient(135deg,#063b69,#0873b6)}.result-header h2{font-size:19px}.result-header p{font-size:11px}.summary{margin-top:12px;border-radius:14px}.summary div{padding:10px 14px}.summary span{font-size:10px}.summary strong{font-size:20px}
+      .result-grid{grid-template-columns:1fr 1fr;gap:9px;padding:12px;flex:1}.impact{min-height:137px;padding:13px;border-radius:16px}.impact-label{font-size:11px}.impact-badge{width:36px;height:36px;border-radius:11px}.impact-badge svg{width:22px;height:22px}.impact-value{font-size:31px;margin:8px 0 4px}.equiv{font-size:9px}
+      .note{margin:0 14px 11px;padding:8px 3px 0;font-size:8.5px}footer{padding:0 16px 10px;font-size:9px}
+    }
   </style>
 </head>
 <body>
