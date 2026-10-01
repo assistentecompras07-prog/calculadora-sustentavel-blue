@@ -71,6 +71,46 @@
       .result-grid{gap:8px;padding:10px}.impact{min-height:132px!important;padding:11px 10px 11px 88px!important}.impact-art{left:8px;width:72px;height:72px}.impact-value{font-size:28px;margin:6px 0 3px}.impact-label{font-size:11px}.equiv{font-size:8px}
       .note{margin:0 12px 8px;padding-top:6px;font-size:8px}footer{display:none}
     }
+
+    /* Seleção individual por código */
+    .product-picker{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin-bottom:10px}
+    .product-choice{border:1px solid var(--line);border-radius:12px;background:#fff;padding:6px;min-width:0;transition:.18s ease;position:relative}
+    .product-choice:hover{border-color:#79b993;transform:translateY(-1px)}
+    .product-choice.active{border-color:var(--green);box-shadow:0 0 0 3px rgba(55,166,106,.13);background:#f1fbf5}
+    .product-choice img{display:block;width:100%;height:50px;object-fit:contain;margin-bottom:3px}
+    .product-choice strong{display:block;color:var(--blue-dark);font-size:10px;line-height:1;text-align:center}
+    .selected-product{display:grid;grid-template-columns:124px minmax(0,1fr);gap:13px;align-items:center;border:1px solid #cfe5d8;background:linear-gradient(145deg,#f8fffb,#eef9f3);border-radius:16px;padding:10px}
+    .selected-photo{width:124px;height:100px;object-fit:contain;background:#fff;border-radius:12px}
+    .selected-code{display:inline-flex;background:var(--blue);color:#fff;border-radius:999px;padding:4px 9px;font-size:10px;font-weight:800;margin-bottom:5px}
+    .selected-info h3{font-size:15px;margin:0 0 3px;line-height:1.2;color:#164b36}.selected-info p{font-size:10px;color:var(--muted);margin:0;line-height:1.4}
+    .add-row{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:9px}.add-row .stepper{margin:0}.add-product{border:0;border-radius:11px;background:var(--green);color:#fff;font-size:11px;font-weight:800;padding:0 14px}.add-product:hover{background:var(--green-dark)}
+    .added-list{display:grid;gap:6px;margin-top:9px;max-height:112px;overflow:auto;padding-right:2px}.added-empty{text-align:center;color:var(--muted);font-size:10px;padding:12px;border:1px dashed var(--line);border-radius:12px}
+    .added-item{display:grid;grid-template-columns:42px 1fr auto auto;gap:8px;align-items:center;padding:6px 8px;background:#f7fafc;border-radius:11px;border:1px solid #e1e9ee}.added-item img{width:42px;height:32px;object-fit:contain}.added-item strong{font-size:10px;display:block}.added-item span{font-size:9px;color:var(--muted)}.qty-control{display:flex;align-items:center;gap:5px}.qty-control button,.remove-item{border:0;border-radius:7px;width:23px;height:23px;background:#e5f4eb;color:var(--green-dark);font-weight:800;padding:0}.qty-control b{min-width:18px;text-align:center;font-size:11px}.remove-item{background:#edf2f5;color:#758795;font-size:14px}
+    @media(min-width:1200px){.product-picker{grid-template-columns:repeat(6,minmax(0,1fr))}.product-choice img{height:46px}}
+    @media(max-width:860px){.product-picker{grid-template-columns:repeat(3,minmax(0,1fr))}.product-choice img{height:64px}.selected-product{grid-template-columns:105px 1fr}.selected-photo{width:105px}.added-list{max-height:none}}
+    @media(max-width:480px){.product-picker{grid-template-columns:repeat(2,minmax(0,1fr))}.selected-product{grid-template-columns:1fr}.selected-photo{width:100%;height:130px}.add-row{grid-template-columns:1fr}.add-product{min-height:42px}}
+    .products.individual-products{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+    .individual-products .product{min-height:135px;padding:8px;gap:5px}
+    .individual-products .product-top{display:grid;grid-template-columns:66px minmax(0,1fr);gap:7px;align-items:center}
+    .individual-products .product-icon{width:66px!important;height:58px!important;background:#fff!important;border:1px solid #e1e9ee;border-radius:10px}
+    .individual-products .product-icon img{object-fit:contain;transform:none;padding:2px}
+    .individual-products .product-name{font-size:10px;line-height:1.2}.individual-products .product-code{display:inline-block;color:#fff;background:var(--blue);border-radius:999px;padding:3px 7px;font-size:9px;font-weight:800;margin-bottom:3px}
+    .individual-products .product-meta{font-size:7.5px;line-height:1.35}.individual-products .stepper{height:31px;grid-template-columns:34px 1fr 34px}.individual-products .stepper button{min-height:31px;font-size:17px}.individual-products .stepper input{font-size:13px}
+    @media(max-width:1150px) and (min-width:861px){.products.individual-products{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:860px){.products.individual-products{grid-template-columns:repeat(2,minmax(0,1fr))}.individual-products .product{min-height:138px}}
+    @media(max-width:520px){.products.individual-products{grid-template-columns:1fr}.individual-products .product-name{font-size:12px}.individual-products .product-meta{font-size:9px}}
+
+    /* V8 — linhas amplas inspiradas na referência enviada */
+    .workspace{display:block;max-width:1460px}.inputs{background:transparent;border:0;box-shadow:none;padding:0}.inputs .section-head{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px 20px;margin-bottom:12px;align-items:center}
+    .products.individual-products{display:grid;grid-template-columns:1fr;gap:14px}
+    .individual-products .product{display:grid;grid-template-columns:minmax(260px,1.2fr) 175px repeat(4,minmax(125px,.72fr));align-items:center;gap:12px;min-height:172px;padding:16px 18px;border-radius:20px;background:#fff;border:1px solid #d8e6eb;box-shadow:0 10px 30px rgba(21,66,91,.07)}
+    .individual-products .product-top{display:grid;grid-template-columns:132px minmax(0,1fr);gap:14px;align-items:center}.individual-products .product-icon{width:132px!important;height:118px!important;border:0;border-radius:14px;background:#f8fbfd!important}.individual-products .product-icon img{width:100%;height:100%;object-fit:contain;transform:none;padding:4px}
+    .individual-products .product-code{font-size:10px;padding:4px 9px;margin-bottom:6px}.individual-products .product-name{font-size:15px;line-height:1.25;color:#173044}.individual-products .product-meta{font-size:9px;line-height:1.55;margin-top:6px}.individual-products .mass-pill{display:inline-block;margin-top:7px;background:#eaf8f0;color:#21784a;border-radius:999px;padding:4px 8px;font-size:9px;font-weight:800}
+    .quantity-box{align-self:stretch;display:flex;flex-direction:column;justify-content:center;padding:10px;border-left:1px solid #e4ecef;border-right:1px solid #e4ecef}.quantity-box label{font-size:10px;font-weight:800;text-align:center;color:#405c6d;margin-bottom:8px}.individual-products .quantity-box .stepper{height:42px;grid-template-columns:40px 1fr 40px}.individual-products .quantity-box .stepper button{min-height:42px;font-size:20px}.individual-products .quantity-box .stepper input{font-size:16px}.quantity-box small{text-align:center;color:#7d8e99;font-size:8px;margin-top:6px}
+    .row-impact{min-height:118px;border-radius:15px;padding:10px 8px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}.row-impact.water{background:#edf8fd}.row-impact.energy{background:#fffbea}.row-impact.area{background:#edf9f2}.row-impact.carbon{background:#f1f7f6}.row-impact img{width:52px;height:44px;object-fit:contain}.row-impact span{font-size:9px;font-weight:800;color:#31576b;margin:3px 0}.row-impact strong{font-size:18px;line-height:1;color:#187246}.row-impact small{font-size:8px;color:#6c808c;margin-top:4px}
+    .results{margin-top:16px}.results .result-header{border-radius:22px 22px 0 0}.results .result-grid{grid-template-columns:repeat(4,1fr)}.results .impact{min-height:150px!important}.mobile-impact{display:none!important}
+    @media(max-width:1180px){.individual-products .product{grid-template-columns:minmax(250px,1.3fr) 160px repeat(2,minmax(130px,1fr))}.row-impact{min-height:94px}.results .result-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:760px){.individual-products .product{grid-template-columns:1fr 1fr;gap:9px;padding:13px}.individual-products .product-top{grid-column:1/-1}.quantity-box{grid-column:1/-1;border:0;border-top:1px solid #e4ecef;border-bottom:1px solid #e4ecef}.individual-products .product-icon{width:120px!important;height:100px!important}.row-impact{min-height:105px}.results .result-grid{grid-template-columns:1fr}.eco-hero>div{max-width:78%}}
   </style>
 </head>
 <body>
@@ -87,13 +127,13 @@
 
   <main class="shell workspace">
     <section class="card inputs" aria-labelledby="input-title">
-      <div class="section-head"><div><h2 id="input-title">Consumo mensal</h2><p>Adicione os fardos ou caixas. Pesos brutos médios conforme ficha técnica.</p></div><button class="reset" id="clear" type="button">Limpar</button></div>
-      <div class="products" id="products"></div>
+      <div class="section-head"><div><h2 id="input-title">Consumo mensal por produto</h2><p>Informe a quantidade em cada código utilizado.</p></div><button class="reset" id="clear" type="button">Limpar</button></div>
+      <div class="products individual-products" id="products"></div>
       <button class="mobile-impact" id="see-impact" type="button">Ver meu impacto</button>
     </section>
 
     <section class="card results" id="results" aria-labelledby="result-title" aria-live="polite">
-      <div class="result-header"><h2 id="result-title">Seu impacto estimado</h2><p>Os resultados são atualizados automaticamente.</p><div class="summary"><div><span>Total informado</span><strong><span id="total-packs">0</span> fardos</strong></div><div><span>Massa considerada</span><strong><span id="total-mass">0,0</span> kg</strong></div></div></div>
+      <div class="result-header"><h2 id="result-title">Seu impacto estimado</h2><p>Os resultados são atualizados automaticamente.</p><div class="summary"><div><span>Total informado</span><strong><span id="total-packs">0</span> volumes</strong></div><div><span>Massa considerada</span><strong><span id="total-mass">0,0</span> kg</strong></div></div></div>
       <div class="result-grid">
         <article class="impact water"><img class="impact-art" src="assets/illustrations/agua-individual.png" alt=""><div class="impact-label">Água preservada</div><div><div class="impact-value"><span id="water">0</span> <small>L</small></div><p class="equiv">Equivale a cerca de <strong><span id="water-eq">0</span> banhos</strong> de 10 minutos</p></div></article>
         <article class="impact energy"><img class="impact-art" src="assets/illustrations/energia-individual.png" alt=""><div class="impact-label">Energia otimizada</div><div><div class="impact-value"><span id="energy">0,0</span> <small>kWh</small></div><p class="equiv">Equivale a cerca de <strong><span id="energy-eq">0,0</span> dias</strong> de geladeira ligada</p></div></article>
@@ -107,23 +147,24 @@
 
   <script>
     const products=[
-      {id:'toalhaBobina',name:'Papel toalha bobina',detail:'Códigos 1930 e 3235',mass:6.03,icon:'roll'},
-      {id:'toalhaInterfolhado',name:'Papel toalha interfolhado',detail:'Códigos 1729, 3016, 1929 e 3908',mass:5.01,icon:'layers'},
-      {id:'higienicoRolao',name:'Papel higiênico rolão',detail:'Códigos 3027, 1732 e 1733',mass:5.50,icon:'roll'},
-      {id:'higienicoInterfolhado',name:'Papel higiênico interfolhado',detail:'Código 3015',mass:5.91,icon:'layers'}
+      {id:'1729',name:'Papel toalha interfolhado',detail:'Linha Starter · Folha simples · 1.000 folhas · 20 × 20 cm',mass:5.01,image:'1729.png'},
+      {id:'1930',name:'Papel toalha bobina',detail:'Linha Starter · Folha simples · 6 rolos de 20 cm × 200 m',mass:6.03,image:'1930.png'},
+      {id:'1929',name:'Papel toalha interfolhado',detail:'Linha Basic · Folha simples · 250 folhas · 21,5 × 20 cm',mass:5.01,image:'1929.png'},
+      {id:'3015',name:'Papel higiênico interfolhado',detail:'Linha Ultra · Folhas duplas · 500 folhas · 10 × 20 cm',mass:5.91,image:'3015.png'},
+      {id:'3016',name:'Papel toalha interfolhado',detail:'Linha Prime · Folha simples · 250 folhas · 21,5 × 20 cm',mass:5.01,image:'3016.png'},
+      {id:'3908',name:'Papel toalha interfolhado',detail:'Linha Ultra · Folhas duplas · 200 folhas · 21,5 × 20 cm',mass:5.01,image:'3908.png'},
+      {id:'1732',name:'Papel higiênico rolão',detail:'Linha Basic · Folha simples · 8 rolos de 10 cm × 400 m',mass:5.50,image:'1732.png'},
+      {id:'1733',name:'Papel higiênico rolão',detail:'Linha Basic · Folha simples · 8 rolos de 10 cm × 300 m',mass:5.50,image:'1733.png'},
+      {id:'2430',name:'Papel toalha bobina',detail:'Linha Basic · Folha simples · 6 rolos de 20 cm × 200 m',mass:6.03,image:'2430.png'},
+      {id:'3027',name:'Papel higiênico rolão',detail:'Linha Ultra · Folhas duplas · 8 rolos de 10 cm × 250 m',mass:5.50,image:'3027.jpg'},
+      {id:'3235',name:'Papel toalha bobina',detail:'Linha Prime · Folha simples · 6 rolos de 20 cm × 200 m',mass:6.03,image:'3235.png'}
     ];
     const coef={water:20,energy:2.2,area:.94,carbon:.5};
     const equiv={shower:70,fridge:1,seedling:4,carKm:.15};
-    const icons={
-      toalhaBobina:'<img src="assets/illustrations/papel-bobina.png" alt="">',
-      toalhaInterfolhado:'<img src="assets/illustrations/papel-interfolhado.png" alt="">',
-      higienicoRolao:'<img src="assets/illustrations/higienico-rolao.png" alt="">',
-      higienicoInterfolhado:'<img src="assets/illustrations/higienico-interfolhado.png" alt="">'
-    };
     const $=id=>document.getElementById(id);const format=(n,d=0)=>n.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d});
-    $('products').innerHTML=products.map(p=>`<div class="product"><div class="product-top"><span class="product-icon">${icons[p.id]}</span><div><label class="product-name" for="${p.id}">${p.name}</label><div class="product-meta">${p.detail} · Peso aproximado: ${format(p.mass,2)} kg</div></div></div><div class="stepper"><button type="button" data-id="${p.id}" data-step="-1" aria-label="Diminuir ${p.name}">−</button><input id="${p.id}" type="number" min="0" step="1" value="0" inputmode="numeric" aria-label="Quantidade mensal de ${p.name}"><button type="button" data-id="${p.id}" data-step="1" aria-label="Aumentar ${p.name}">+</button></div><span class="input-unit">fardos ou caixas por mês</span></div>`).join('');
-    function calculate(){let mass=0,packs=0;products.forEach(p=>{const q=Math.max(0,parseInt($(p.id).value,10)||0);packs+=q;mass+=q*p.mass});const water=mass*coef.water,energy=mass*coef.energy,area=mass*coef.area,carbon=mass*coef.carbon;$('total-packs').textContent=format(packs);$('total-mass').textContent=format(mass,1);$('water').textContent=format(water);$('energy').textContent=format(energy,1);$('area').textContent=format(area,1);$('carbon').textContent=format(carbon,1);$('water-eq').textContent=format(water/equiv.shower);$('energy-eq').textContent=format(energy/equiv.fridge,1);$('area-eq').textContent=format(area/equiv.seedling,1);$('carbon-eq').textContent=format(carbon/equiv.carKm,1);const grid=document.querySelector('.result-grid');grid.classList.remove('pulse');void grid.offsetWidth;grid.classList.add('pulse')}
-    document.addEventListener('input',e=>{if(e.target.matches('input[type=number]'))calculate()});document.addEventListener('click',e=>{const b=e.target.closest('button[data-id]');if(!b)return;const input=$(b.dataset.id);input.value=Math.max(0,(parseInt(input.value,10)||0)+Number(b.dataset.step));calculate()});$('clear').addEventListener('click',()=>{products.forEach(p=>$(p.id).value=0);calculate()});$('see-impact').addEventListener('click',()=>$('results').scrollIntoView({behavior:'smooth',block:'start'}));calculate();
+    $('products').innerHTML=products.map(p=>`<div class="product"><div class="product-top"><span class="product-icon"><img src="assets/products/${p.image}" alt="Embalagem do código ${p.id}"></span><div><span class="product-code">Código ${p.id}</span><label class="product-name" for="product-${p.id}">${p.name}</label><div class="product-meta">${p.detail}</div><span class="mass-pill">${format(p.mass,2)} kg aproximados</span></div></div><div class="quantity-box"><label for="product-${p.id}">Quantidade mensal</label><div class="stepper"><button type="button" data-id="${p.id}" data-step="-1" aria-label="Diminuir código ${p.id}">−</button><input id="product-${p.id}" type="number" min="0" step="1" value="0" inputmode="numeric" aria-label="Quantidade mensal do código ${p.id}"><button type="button" data-id="${p.id}" data-step="1" aria-label="Aumentar código ${p.id}">+</button></div><small>fardos ou caixas</small></div><div class="row-impact water"><img src="assets/illustrations/agua-individual.png" alt=""><span>Água preservada</span><strong id="row-water-${p.id}">0 L</strong><small>estimativa mensal</small></div><div class="row-impact energy"><img src="assets/illustrations/energia-individual.png" alt=""><span>Energia otimizada</span><strong id="row-energy-${p.id}">0,0 kWh</strong><small>estimativa mensal</small></div><div class="row-impact area"><img src="assets/illustrations/arvores-individual.png" alt=""><span>Área protegida</span><strong id="row-area-${p.id}">0,0 m²</strong><small>estimativa mensal</small></div><div class="row-impact carbon"><img src="assets/illustrations/carbono-individual.png" alt=""><span>Carbono evitado</span><strong id="row-carbon-${p.id}">0,0 kg</strong><small>CO₂ equivalente</small></div></div>`).join('');
+    function calculate(){let mass=0,packs=0;products.forEach(p=>{const q=Math.max(0,parseInt($(`product-${p.id}`).value,10)||0),pm=q*p.mass;packs+=q;mass+=pm;$(`row-water-${p.id}`).textContent=`${format(pm*coef.water)} L`;$(`row-energy-${p.id}`).textContent=`${format(pm*coef.energy,1)} kWh`;$(`row-area-${p.id}`).textContent=`${format(pm*coef.area,1)} m²`;$(`row-carbon-${p.id}`).textContent=`${format(pm*coef.carbon,1)} kg`});const water=mass*coef.water,energy=mass*coef.energy,area=mass*coef.area,carbon=mass*coef.carbon;$('total-packs').textContent=format(packs);$('total-mass').textContent=format(mass,1);$('water').textContent=format(water);$('energy').textContent=format(energy,1);$('area').textContent=format(area,1);$('carbon').textContent=format(carbon,1);$('water-eq').textContent=format(water/equiv.shower);$('energy-eq').textContent=format(energy/equiv.fridge,1);$('area-eq').textContent=format(area/equiv.seedling,1);$('carbon-eq').textContent=format(carbon/equiv.carKm,1);const grid=document.querySelector('.result-grid');grid.classList.remove('pulse');void grid.offsetWidth;grid.classList.add('pulse')}
+    document.addEventListener('input',e=>{if(e.target.matches('.individual-products input[type=number]'))calculate()});document.addEventListener('click',e=>{const b=e.target.closest('button[data-id]');if(!b)return;const input=$(`product-${b.dataset.id}`);input.value=Math.max(0,(parseInt(input.value,10)||0)+Number(b.dataset.step));calculate()});$('clear').addEventListener('click',()=>{products.forEach(p=>$(`product-${p.id}`).value=0);calculate()});$('see-impact').addEventListener('click',()=>$('results').scrollIntoView({behavior:'smooth',block:'start'}));calculate();
   </script>
 </body>
 </html>
