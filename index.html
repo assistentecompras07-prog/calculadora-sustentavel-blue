@@ -111,6 +111,12 @@
     .results{margin-top:16px}.results .result-header{border-radius:22px 22px 0 0}.results .result-grid{grid-template-columns:repeat(4,1fr)}.results .impact{min-height:150px!important}.mobile-impact{display:none!important}
     @media(max-width:1180px){.individual-products .product{grid-template-columns:minmax(250px,1.3fr) 160px repeat(2,minmax(130px,1fr))}.row-impact{min-height:94px}.results .result-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:760px){.individual-products .product{grid-template-columns:1fr 1fr;gap:9px;padding:13px}.individual-products .product-top{grid-column:1/-1}.quantity-box{grid-column:1/-1;border:0;border-top:1px solid #e4ecef;border-bottom:1px solid #e4ecef}.individual-products .product-icon{width:120px!important;height:100px!important}.row-impact{min-height:105px}.results .result-grid{grid-template-columns:1fr}.eco-hero>div{max-width:78%}}
+
+    /* V9 — resumo geral no topo */
+    .workspace{display:flex;flex-direction:column}.results{order:-1;margin:0 0 16px;display:grid;grid-template-columns:330px minmax(0,1fr);background:#fff;border-radius:22px;overflow:hidden}.inputs{order:1}
+    .results .result-header{background:#fff!important;color:var(--ink);padding:20px 24px!important;border-right:1px solid var(--line);border-radius:0}.results .result-header::after{display:none}.results .result-header h2{font-size:23px;color:#173044}.results .result-header p{color:var(--muted);font-size:10px}.results .summary{margin-top:14px;background:#eaf8f0;border:0;color:#21784a}.results .summary span{color:#527663}.results .summary strong{color:#176e47}.results .result-grid{grid-template-columns:repeat(4,1fr);gap:10px;padding:13px;background:#fff}.results .impact{min-height:126px!important;padding:11px 8px 11px 78px!important;border-radius:15px}.results .impact-art{width:64px;height:64px}.results .impact-label{font-size:10px}.results .impact-value{font-size:23px;margin:6px 0 3px}.results .equiv{font-size:7.5px}.results .note{grid-column:1/-1;margin:0 18px 12px;padding-top:7px}
+    @media(max-width:1100px){.results{grid-template-columns:1fr}.results .result-header{border-right:0;border-bottom:1px solid var(--line)}.results .result-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.results .result-grid{grid-template-columns:1fr}.results .impact{min-height:135px!important}}
   </style>
 </head>
 <body>
